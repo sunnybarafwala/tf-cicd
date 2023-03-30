@@ -9,7 +9,13 @@ terraform {
         azurerm =   {
             source  =   "hashicorp/azurerm"
         }
-    }
+    }  
+    backend "azurerm" {
+    resource_group_name  = "TF"
+    storage_account_name = "terraform121"
+    container_name       = "terrqa"
+    key                  = "prod.terraform.tfstate"
+  }
 }
 
 # Provider Block
