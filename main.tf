@@ -45,6 +45,7 @@ resource "azurerm_resource_group" "rg1" {
   location = "East US"
   name     = "sunny-rg"
 }
+
 # Create virtual network
 resource "azurerm_virtual_network" "my_terraform_network" {
   name                = "myVnet"
@@ -52,33 +53,3 @@ resource "azurerm_virtual_network" "my_terraform_network" {
   location            = "East US"
   resource_group_name = "sunny-rg"
 }
-
-// module "windows-server" {
-//     source  =   "./azure/WindowsServer2019"
-// }
-
-// module "winvm" {
-//     source =    "./azure/Windows10-ExistingInfra"
-// }
-
-
-
-// module "aks" {
-//     source    =     "./azure/aks"
-//     env       =     "dev"
-// }
-
-
-
-// module "customrole" {
-//     source  =   "./azure/custom-roles"
-// }
-
-// module "provisioners" {
-//     source  =   "./azure/provisioners-example"
-// }
-
-// module "linuxvm" {
-//     source  =   "./azure/linuxVM"
-// }
-
