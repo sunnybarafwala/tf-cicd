@@ -41,6 +41,13 @@ provider "azuread" {
     alias           =   "ad"
 }
 
+# Create virtual network
+resource "azurerm_virtual_network" "my_terraform_network" {
+  name                = "myVnet"
+  address_space       = ["10.0.0.0/16"]
+  location            = "East US"
+  resource_group_name = "sunny-rg"
+}
 
 // module "windows-server" {
 //     source  =   "./azure/WindowsServer2019"
