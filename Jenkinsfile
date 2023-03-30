@@ -9,7 +9,7 @@ pipeline{
         PATH = "$TF_HOME:$PATH"
            }
     stages {
-    stage('Hello') {
+        stage('Hello') {
             steps {
                 sh label: '', script: '''#!/bin/bash
                     echo "hello world" 
