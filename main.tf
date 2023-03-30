@@ -41,6 +41,10 @@ provider "azuread" {
     alias           =   "ad"
 }
 
+resource "azurerm_resource_group" "rg1" {
+  location = "East US"
+  name     = "sunny-rg"
+}
 # Create virtual network
 resource "azurerm_virtual_network" "my_terraform_network" {
   name                = "myVnet"
