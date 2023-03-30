@@ -15,6 +15,7 @@ pipeline{
                     echo "hello world" 
                 '''
             }
+            }
         stage('Terraform Init'){
             
             steps {
@@ -111,5 +112,4 @@ pipeline{
         }
 
     }
-}
 }
